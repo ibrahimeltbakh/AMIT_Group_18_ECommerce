@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Button, Table } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { ThemeContext } from "./../context/themeContext";
@@ -6,9 +6,6 @@ import { ThemeContext } from "./../context/themeContext";
 export default function Cart() {
   let cartProducts = useSelector((state) => state.cart);
   let { theme } = useContext(ThemeContext);
-  useEffect(() => {
-    console.log(cartProducts);
-  });
   return (
     <div>
       <Table striped bordered hover variant={theme == "dark" && "dark"}>
